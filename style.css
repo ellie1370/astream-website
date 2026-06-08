@@ -1737,7 +1737,7 @@ body::after{
   line-height:1;
 }
 
-.impact-marquee:hover .marquee-track{
+.marquee-row:hover .marquee-track{
   animation-play-state:paused;
 }
 
