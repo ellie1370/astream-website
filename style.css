@@ -1769,6 +1769,114 @@ body::after{
     text-align:left;
   }
 }
+/* =========================
+   DRAMATIC HERO ANIMATION MODE
+========================= */
+
+.hero::before{
+  animation:
+    heroPulse 7s ease-in-out infinite alternate,
+    heroMoodShift 16s ease-in-out infinite;
+}
+
+.hero::after{
+  animation:
+    particleMove 10s linear infinite,
+    particleFloat 6s ease-in-out infinite alternate,
+    particleMood 18s ease-in-out infinite;
+}
+
+.wave{
+  animation:
+    waveMove 8s linear infinite,
+    waveDrama 14s ease-in-out infinite;
+}
+
+.wave:nth-child(2){
+  animation-duration:10s, 16s;
+}
+
+.wave:nth-child(3){
+  animation-duration:12s, 18s;
+}
+
+.wave:nth-child(4){
+  animation-duration:14s, 20s;
+}
+
+@keyframes heroMoodShift{
+  0%{
+    background:
+      radial-gradient(circle at 72% 48%, rgba(255,30,50,.28), transparent 34%),
+      radial-gradient(circle at 82% 52%, rgba(255,120,20,.14), transparent 42%);
+  }
+
+  35%{
+    background:
+      radial-gradient(circle at 62% 42%, rgba(255,43,61,.35), transparent 34%),
+      radial-gradient(circle at 88% 60%, rgba(255,122,26,.2), transparent 42%);
+  }
+
+  70%{
+    background:
+      radial-gradient(circle at 80% 56%, rgba(255,20,70,.32), transparent 36%),
+      radial-gradient(circle at 68% 36%, rgba(255,90,20,.18), transparent 40%);
+  }
+
+  100%{
+    background:
+      radial-gradient(circle at 72% 48%, rgba(255,30,50,.28), transparent 34%),
+      radial-gradient(circle at 82% 52%, rgba(255,120,20,.14), transparent 42%);
+  }
+}
+
+@keyframes particleMood{
+  0%{
+    background-size:22px 22px;
+    opacity:.85;
+    filter:blur(0);
+  }
+
+  30%{
+    background-size:18px 18px;
+    opacity:1;
+    filter:blur(.2px);
+  }
+
+  65%{
+    background-size:30px 30px;
+    opacity:.7;
+    filter:blur(.6px);
+  }
+
+  100%{
+    background-size:22px 22px;
+    opacity:.85;
+    filter:blur(0);
+  }
+}
+
+@keyframes waveDrama{
+  0%{
+    opacity:.25;
+    filter:blur(12px);
+  }
+
+  40%{
+    opacity:.65;
+    filter:blur(8px);
+  }
+
+  75%{
+    opacity:.38;
+    filter:blur(16px);
+  }
+
+  100%{
+    opacity:.25;
+    filter:blur(12px);
+  }
+}
 
 /* =========================
    FINAL INDEX HERO FIX
