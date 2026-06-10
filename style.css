@@ -727,13 +727,14 @@ body::after{
 }
 
 .speaker-card:hover{
-  transform:translateY(-10px);
-  border-color:rgba(255,43,61,.5);
-  box-shadow:0 0 40px rgba(255,43,61,.18);
+  transform:none;
+  border-color:rgba(255,43,61,.18);
+  box-shadow:0 0 50px rgba(255,43,61,.07);
 }
 
+
 .speaker-card:hover::before{
-  transform:translateX(100%);
+  transform:translateX(-100%);
 }
 
 .speaker-card img{
@@ -748,7 +749,7 @@ body::after{
 }
 
 .speaker-card:hover img{
-  transform:scale(1.03);
+  transform:none;
 }
 
 .speaker-info{
@@ -776,6 +777,27 @@ body::after{
   margin:4px 0;
   font-weight:700;
   color:#f1f4ff;
+}
+
+.speaker-card,
+.speaker-card::before,
+.speaker-card img{
+  transition:none !important;
+}
+
+.speaker-card:hover{
+  transform:none !important;
+  border-color:rgba(255,43,61,.18) !important;
+  box-shadow:none !important;
+}
+
+.speaker-card:hover::before{
+  transform:none !important;
+  background:none !important;
+}
+
+.speaker-card:hover img{
+  transform:none !important;
 }
 /* COMMON SECTION */
 
