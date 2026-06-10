@@ -2938,3 +2938,51 @@ body::after{
   }
 }
 
+/* =========================
+   ABOUT PAGE COLOR MATCH TO INDEX
+========================= */
+
+.about-visual-hero{
+  background:
+    radial-gradient(circle at 75% 45%, rgba(255,43,61,.28), transparent 32%),
+    radial-gradient(circle at 88% 55%, rgba(255,122,26,.18), transparent 38%),
+    linear-gradient(135deg, #01030d 0%, #020617 45%, #03091f 100%) !important;
+}
+
+.about-visual-hero::before{
+  background-image:
+    radial-gradient(circle, rgba(255,25,45,.95) 2.2px, transparent 3.4px) !important;
+  background-size:20px 20px !important;
+  opacity:.9 !important;
+  mask-image:
+    radial-gradient(ellipse at 82% 50%, black 0%, black 25%, transparent 62%) !important;
+}
+
+.about-visual-hero::after{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(1,2,8,.92) 0%,
+      rgba(1,2,8,.62) 38%,
+      rgba(1,2,8,.25) 65%,
+      rgba(1,2,8,.45) 100%
+    ) !important;
+}
+
+.about-blobs span{
+  background:#ff2b3d !important;
+  opacity:.55 !important;
+}
+
+.about-blobs span:nth-child(2),
+.about-blobs span:nth-child(4){
+  background:#ff7a1a !important;
+}
+
+.about-info-row strong,
+.about-info-row span{
+  text-shadow:
+    2px 0 rgba(255,43,61,.85),
+    -2px 0 rgba(255,122,26,.65) !important;
+}
+
