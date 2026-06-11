@@ -332,7 +332,10 @@ body::after{
   text-align:center;
 
   margin:0 auto;
+
+  padding-top:140px !important;
 }
+
 
 /* RED LASER WAVES */
 
@@ -504,24 +507,26 @@ body::after{
 
   width:100%;
 
-  max-width:1300px;
+  max-width:1700px;
+
+  margin: 0 auto;
 
   display:flex;
 
   flex-direction:column;
 
-  align-items:flex-start;
+  align-items:center;
 
   justify-content:center;
 
-  min-height:80vh;
+  text-align: center;
 }
 
 
 .kicker{
   font-family:'Oswald', sans-serif;
 
-  font-size:1.3rem;
+  font-size:clamp(2rem,3vw,3.8rem);
 
   font-style:italic;
 
@@ -534,6 +539,11 @@ body::after{
   animation:none;
 
   text-shadow:none;
+
+  max-width:1400px;
+
+  line-height:1.2;
+
 }
 
 
@@ -3153,3 +3163,170 @@ body::after{
     grid-template-columns:1fr;
   }
 }
+
+/* =========================
+   HERO SLOGAN BANNER
+========================= */
+
+.slogan-banner{
+  width:100vw;
+
+  margin:420px calc(50% - 50vw) -220px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:54px 80px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #18e0c4 0%,
+      #9dd93a 32%,
+      #ffb100 58%,
+      #ff5d3d 80%,
+      #ff008c 100%
+    );
+
+  box-shadow:
+    0 0 60px rgba(255,80,80,.22);
+
+  overflow:hidden;
+  position:relative;
+
+  z-index:5;
+}
+.slogan-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.12),
+      transparent 28%
+    );
+
+  pointer-events:none;
+}
+
+.banner-left span{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:900;
+  font-size:clamp(5rem,10vw,9rem);
+  line-height:.9;
+  color:#ffffff;
+}
+
+.banner-right{
+  text-align:right;
+}
+
+.banner-right h3{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:clamp(3rem,6vw,5rem);
+  line-height:1;
+  color:#ffffff;
+  margin-bottom:16px;
+}
+
+.banner-right p{
+  color:#ffffff;
+  font-size:1.4rem;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.hero{
+  padding-bottom:200px;
+}
+@media(max-width:900px){
+
+  .slogan-banner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    padding:28px;
+  }
+
+  .banner-right{
+    text-align:left;
+  }
+
+  .banner-left span{
+    font-size:4rem;
+  }
+
+  .banner-right h3{
+    font-size:2.2rem;
+  }
+
+  .banner-right p{
+    font-size:1rem;
+  }
+}
+
+/* =========================
+   HERO FULLSCREEN SCALE UP
+========================= */
+
+.hero{
+  min-height:135vh !important;
+  padding-top:140px !important;
+  padding-bottom:260px !important;
+}
+
+.hero-content{
+  max-width:1900px !important;
+  min-height:120vh !important;
+
+  padding-top:90px !important;
+
+  justify-content:flex-start !important;
+}
+
+/* GLOBAL STARTUP CONFERENCE */
+
+.kicker{
+  font-size:clamp(2rem,2.5vw,3rem) !important;
+  margin-bottom:34px !important;
+}
+
+/* 2026 */
+
+.year{
+  font-size:clamp(7rem,11vw,10rem) !important;
+  margin-bottom:14px !important;
+}
+
+/* A-STREAM */
+
+.title{
+  font-size:clamp(11rem,20vw,18rem) !important;
+  line-height:.8 !important;
+  margin-bottom:48px !important;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+  font-size:clamp(2.2rem,3.2vw,3.4rem) !important;
+  max-width:1400px !important;
+  line-height:1.25 !important;
+}
+
+/* D-DAY BANNER */
+
+.hero-banner{
+  width:100vw !important;
+
+  margin-top:340px !important;
+  margin-left:calc(50% - 50vw) !important;
+
+  border-radius:0 !important;
+}
+
