@@ -667,3 +667,84 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
   .stat-item{min-width:220px}
   .invest-item{min-width:520px}
 }
+
+.scaleup-banner::before{
+  content:"";
+
+  position:absolute;
+  inset:-20%;
+
+  background:
+    radial-gradient(circle, rgba(255,30,50,.95) 2px, transparent 3px);
+
+  background-size:22px 22px;
+
+  opacity:.95;
+
+  transform:
+    perspective(1200px)
+    rotateY(-18deg)
+    rotateX(8deg)
+    scale(1.4);
+
+  mask-image:
+    radial-gradient(
+      ellipse at 82% 50%,
+      black 0%,
+      black 12%,
+      rgba(0,0,0,.95) 18%,
+      rgba(0,0,0,.8) 24%,
+      rgba(0,0,0,.6) 32%,
+      rgba(0,0,0,.3) 45%,
+      transparent 70%
+    );
+}
+
+/* =========================
+   SCALE UP BANNER - IMAGE BACKGROUND
+========================= */
+
+.scaleup-banner{
+  min-height:70vh;
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+
+  padding:70px;
+
+  background-image:url("images/scaleup-bg.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.scaleup-content{
+  position:relative;
+  z-index:2;
+  text-align:left;
+  color:white;
+}
+
+.scaleup-year{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:clamp(3rem,6vw,6rem);
+  line-height:.9;
+}
+
+.scaleup-title{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:clamp(4.5rem,10vw,10rem);
+  line-height:.85;
+}
+
+.scaleup-content p{
+  margin-top:12px;
+  font-family:var(--font-body);
+  font-weight:900;
+  font-size:1.2rem;
+}
