@@ -552,9 +552,43 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 .about-visual-content{position:relative;z-index:2;width:100%;max-width:1050px;text-align:center}
 .about-visual-content h1{font-family:var(--font-display);font-style:italic;font-size:clamp(4rem,9vw,8rem);color:white;line-height:.9;margin-bottom:60px;letter-spacing:2px;text-shadow:0 0 18px rgba(255,255,255,.24),0 0 40px rgba(255,43,61,.28)}
 .about-info-table{max-width:1000px;margin:0 auto;display:grid;gap:28px;text-align:left}
-.about-info-row{display:grid;grid-template-columns:190px 1fr;gap:40px;align-items:center;color:white;font-family:'Oswald','Noto Sans KR',sans-serif;font-style:italic}
-.about-info-row strong{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;text-align:right;color:white;text-shadow:2px 0 rgba(255,43,61,.85),-2px 0 rgba(255,122,26,.65)}
-.about-info-row span{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:900;color:white;text-shadow:2px 0 rgba(255,43,61,.85),-2px 0 rgba(255,122,26,.65)}
+.about-info-row{display:grid;grid-template-columns:180px 1fr;gap:34px;align-items:center;color:white;}
+.about-info-row strong{
+
+  font-family:'Montserrat','Noto Sans KR',sans-serif;
+
+  font-size:1.35rem;
+
+  font-weight:900;
+
+  letter-spacing:3px;
+
+  text-align:right;
+
+  color:#ff7a1a;
+
+  font-style:normal;
+
+  text-shadow:none;
+}
+.about-info-row span{
+
+  font-family:'Montserrat','Noto Sans KR',sans-serif;
+
+  font-size:1.9rem;
+
+  font-weight:800;
+
+  letter-spacing:.3px;
+
+  color:white;
+
+  font-style:normal;
+
+  text-shadow:none;
+
+  white-space:nowrap;
+}
 .about-blobs span{position:absolute;z-index:1;width:110px;height:110px;border-radius:50%;background:var(--red);filter:blur(8px);opacity:.55;animation:blobFloat 7s ease-in-out infinite alternate}
 .about-blobs span:nth-child(1){left:-30px;top:18%;width:160px;height:160px}
 .about-blobs span:nth-child(2){right:18%;top:4%;width:130px;height:130px;background:var(--orange)}
