@@ -626,16 +626,23 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 }
 
 .program-title h1{
-  font-family:'Bebas Neue',sans-serif;
+  font-family:var(--font-display);
+
+  font-style:italic;
+
+  font-weight:900;
 
   font-size:clamp(4.5rem,8vw,7.5rem);
 
-  line-height:.95;
+  line-height:.9;
+
   letter-spacing:2px;
 
   color:#fff;
 
   margin-bottom:16px;
+
+  text-transform:uppercase;
 }
 
 .program-title h1 span{
@@ -655,14 +662,121 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 
 /* DAY */
 
+/* =========================
+   PROGRAM PAGE
+========================= */
+
+/* =========================
+   PROGRAM TITLE
+========================= */
+
+.program-title{
+  position:relative;
+  z-index:2;
+
+  max-width:1500px;
+
+  margin:0 auto 80px;
+
+  text-align:center;
+}
+
+/* HIDE OLD TEXT */
+
+.program-title p,
+.program-title h4{
+  display:none;
+}
+
+/* SAME FONT STYLE AS SPEAKER */
+
+.program-title h1{
+  font-family:'Bebas Neue', sans-serif;
+
+  font-style:normal;
+
+  font-weight:900;
+
+  font-size:clamp(3rem,8vw,7rem);
+
+  letter-spacing:2px;
+
+  margin-bottom:0;
+
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    var(--orange),
+    var(--red)
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  color:transparent;
+
+  text-align:center;
+
+  transform:none;
+
+  text-shadow:none;
+}
+
+/* UNDER LINE */
+
+.program-title h1::after{
+  content:"";
+
+  display:block;
+
+  width:90px;
+  height:3px;
+
+  margin:18px auto 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--red),
+      var(--orange)
+    );
+
+  border-radius:999px;
+
+  box-shadow:
+    0 0 18px rgba(255,43,61,.55);
+}
+
+.program-title h4{
+  font-family:'Montserrat','Noto Sans KR',sans-serif;
+
+  font-size:1.12rem;
+
+  font-weight:700;
+
+  color:#dfe5ff;
+
+  letter-spacing:.4px;
+
+  margin-top:24px;
+}
+
+/* DAY */
+
 .program-day{
+  position:relative;
+  z-index:2;
+
   max-width:1500px;
 
   margin:0 auto 24px;
 
   font-family:'Montserrat',sans-serif;
 
-  font-size:1.6rem;
+  font-size:1.45rem;
+
   font-weight:800;
 
   color:white;
@@ -671,19 +785,46 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 }
 
 .program-day strong{
-  color:#00f5d4;
+  color:#ff7a1a;
 
-  font-size:2rem;
+  font-size:1.9rem;
 
   margin-right:14px;
+
+  letter-spacing:2px;
+}
+
+.day-two{
+  margin-top:80px;
 }
 
 /* TABLE */
 
 .program-table-wrap{
+  position:relative;
+  z-index:2;
+
   max-width:1500px;
+
   margin:0 auto;
-  overflow-x:auto;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.09),
+      rgba(255,255,255,.03)
+    );
+
+  border:1px solid rgba(255,122,26,.18);
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 0 40px rgba(255,43,61,.08);
 }
 
 .program-table{
@@ -691,54 +832,56 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 
   border-collapse:collapse;
 
-  background:rgba(255,255,255,.04);
-
-  border-radius:22px;
-  overflow:hidden;
-
-  backdrop-filter:blur(10px);
-
   color:white;
 
   font-family:'Montserrat','Noto Sans KR',sans-serif;
 }
 
 .program-table thead{
-  background:linear-gradient(
-    90deg,
-    rgba(255,43,61,.18),
-    rgba(255,122,26,.12)
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,43,61,.18),
+      rgba(255,122,26,.12)
+    );
 }
 
 .program-table th{
-  padding:26px 20px;
+  padding:24px 22px;
 
   text-align:center;
 
-  font-size:1rem;
-  font-weight:800;
+  font-size:.95rem;
+
+  font-weight:900;
 
   letter-spacing:2px;
 
   color:#ffffff;
+
+  text-transform:uppercase;
 }
 
 .program-table td{
-  padding:28px 20px;
+  padding:26px 22px;
 
   border-bottom:1px solid rgba(255,255,255,.08);
 
   text-align:center;
 
   font-size:1rem;
+
   font-weight:600;
 
   line-height:1.7;
 
   color:#e8ecff;
 
-  transition:.25s ease;
+  transition:.3s ease;
+}
+
+.program-table tr:last-child td{
+  border-bottom:none;
 }
 
 .program-table td:first-child{
@@ -746,89 +889,91 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 
   color:#ffb347;
 
-  font-weight:800;
+  font-weight:900;
 
   white-space:nowrap;
 }
 
+.program-table td:nth-child(2){
+  font-weight:800;
+
+  color:#fff;
+}
+
 .program-table .highlight{
   color:#00f5d4;
-  font-weight:800;
+
+  font-weight:900;
 }
 
-.program-table tr:hover{
+.program-table tbody tr:hover{
   background:rgba(255,255,255,.05);
+
+  transform:scale(1.005);
 }
 
-/* DETAILS */
+/* ANIMATION */
 
-.program-detail-page{
-  padding:120px 52px;
+@keyframes programDotsMove{
 
-  background:
-    radial-gradient(circle at 75% 30%, rgba(255,43,61,.14), transparent 34%),
-    linear-gradient(135deg,#020511 0%,#050819 58%,#020511 100%);
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-120px);
+  }
 }
 
-.program-card-grid{
-  max-width:1200px;
+@keyframes programTitleFloat{
 
-  margin:0 auto;
+  from{
+    transform:
+      translateY(0)
+      skew(-6deg);
+  }
 
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-
-  gap:24px;
+  to{
+    transform:
+      translateY(10px)
+      skew(-6deg);
+  }
 }
 
-.program-card-grid div{
-  min-height:210px;
+/* MOBILE */
 
-  padding:30px;
+@media(max-width:900px){
 
-  border-radius:24px;
+  .program-page{
+    padding:130px 22px 80px;
+  }
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.12),
-      rgba(255,255,255,.04)
-    );
+  .program-title h1{
+    font-size:clamp(3.8rem,15vw,6rem);
+  }
 
-  border:1px solid rgba(255,255,255,.08);
+  .program-title h4{
+    font-size:.95rem;
 
-  transition:.3s ease;
-}
+    line-height:1.7;
+  }
 
-.program-card-grid div:hover{
-  transform:translateY(-8px);
+  .program-day{
+    font-size:1.1rem;
+  }
 
-  border-color:rgba(255,122,26,.35);
+  .program-table-wrap{
+    overflow-x:auto;
+  }
 
-  box-shadow:0 0 30px rgba(255,43,61,.12);
-}
+  .program-table{
+    min-width:850px;
+  }
 
-.program-card-grid h3{
-  color:#ff7a1a;
-
-  font-family:'Bebas Neue',sans-serif;
-
-  font-size:2rem;
-
-  letter-spacing:1px;
-
-  margin-bottom:16px;
-}
-
-.program-card-grid p{
-  color:#dfe5ff;
-
-  font-family:'Montserrat','Noto Sans KR',sans-serif;
-
-  font-size:1rem;
-  font-weight:500;
-
-  line-height:1.8;
+  .program-table th,
+  .program-table td{
+    padding:18px;
+  }
 }
 
 /* IR & MEETING */
@@ -1365,3 +1510,5 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 .contact-logo:hover{
   transform:scale(1.05);
 }
+
+
