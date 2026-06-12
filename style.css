@@ -1073,3 +1073,50 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
   font-size:14px;
   letter-spacing:2px;
 }
+
+.contact-left{
+  display:none;
+}
+
+.scaleup-contact{
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.contact-right{
+  text-align:center;
+}
+
+/* CONTACT LOGO */
+
+.scaleup-contact{
+  position:relative;
+}
+
+.contact-logo{
+  position:absolute;
+
+  right:-35px;
+  bottom:-25px;
+
+  width:650px;
+
+  opacity:.95;
+
+  z-index:5;
+
+  filter:
+    drop-shadow(0 0 20px rgba(255,255,255,.15));
+
+  transition:.4s ease;
+}
+
+.contact-logo img{
+  width:100%;
+  display:block;
+}
+
+.contact-logo:hover{
+  transform:scale(1.05);
+}
