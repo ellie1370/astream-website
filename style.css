@@ -1511,4 +1511,190 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
   transform:scale(1.05);
 }
 
+.about-desc-section{
+  min-height:100vh;
+  position:relative;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  padding:150px 40px 80px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,15,.45),
+      rgba(0,0,15,.75)
+    ),
+    url("images/흐릿배경.png") center/cover no-repeat;
+}
+
+.about-desc-box{
+  max-width:1200px;
+  width:100%;
+
+  text-align:center;
+
+  margin-top:220px;
+}
+
+.about-desc-box p{
+  font-size:clamp(1.3rem,2.5vw,2.3rem);
+  line-height:1.65;
+
+  font-weight:900;
+
+  color:white;
+
+  letter-spacing:-1px;
+
+  text-shadow:
+    0 0 20px rgba(0,0,0,.55);
+}
+
+/* ABOUT OVERVIEW SECTION */
+
+.about-overview-section{
+  min-height:100vh;
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:130px 10% 90px;
+
+  overflow:hidden;
+
+  margin-top:-1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #020616 0%,
+      rgba(2,6,22,.75) 18%,
+      rgba(4,5,45,.35) 45%,
+      rgba(4,5,45,.55) 100%
+    ),
+    url("images/배경사진.png") center/cover no-repeat;
+}
+.overview-content{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:1450px;
+
+  color:white;
+}
+
+.overview-row{
+  display:grid;
+  grid-template-columns:270px 1fr;
+  gap:38px;
+
+  align-items:center;
+
+  margin-bottom:34px;
+}
+
+.overview-row h2{
+  font-family:'Noto Sans KR','Montserrat',sans-serif;
+
+  font-size:2rem;
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  color:white;
+
+  white-space:nowrap;
+}
+
+.overview-row h2::after{
+  content:"|";
+  margin-left:28px;
+
+  font-weight:300;
+  color:rgba(255,255,255,.7);
+}
+
+.overview-row > p{
+  font-size:1.8rem;
+  line-height:1.6;
+
+  font-weight:700;
+
+  color:white;
+}
+
+.detail-row{
+  align-items:flex-start;
+}
+
+.overview-detail{
+  padding-top:4px;
+}
+
+.overview-detail p{
+  font-size:1.45rem;
+  line-height:1.85;
+
+  font-weight:700;
+
+  color:white;
+
+  margin-bottom:6px;
+}
+
+.overview-note{
+  margin-top:45px;
+  margin-left:600px;
+
+  font-size:1.1rem;
+
+  color:rgba(255,255,255,.75);
+}
+
+.overview-note{
+  margin-top:55px;
+
+  text-align:right;
+
+  font-size:1.1rem;
+  font-weight:500;
+
+  color:rgba(255,255,255,.7);
+
+  letter-spacing:.5px;
+}
+
+/* CONTACT NATURAL TRANSITION */
+
+.scaleup-contact{
+  margin-top:-1px;
+}
+
+.scaleup-contact::before{
+  content:"";
+
+  position:absolute;
+  top:-180px;
+  left:0;
+  right:0;
+
+  height:220px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,6,22,0),
+      rgba(2,6,22,.75),
+      rgba(2,6,22,1)
+    );
+
+  z-index:1;
+
+  pointer-events:none;
+}
 
