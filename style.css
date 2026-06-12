@@ -995,3 +995,81 @@ h2{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.7rem);margin-top
 
 }
 
+.scaleup-contact{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+
+  padding:120px 8%;
+  gap:60px;
+
+  color:#fff;
+
+  min-height:700px;
+
+  background:
+    linear-gradient(rgba(0,0,20,.65), rgba(0,0,20,.82)),
+    url("images/확대버전.png") center/cover no-repeat;
+    background-color:#02051a;
+}
+  
+.contact-left h2{
+  font-size:92px;
+  font-weight:900;
+  line-height:.9;
+  margin-bottom:20px;
+
+  font-style:italic;
+  letter-spacing:-4px;
+}
+
+.contact-slogan{
+  font-size:32px;
+  font-weight:700;
+  font-style:italic;
+
+  margin-bottom:40px;
+
+  color:#ff5a5a;
+}
+
+.contact-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+  font-size:15px;
+  letter-spacing:2px;
+  opacity:.85;
+}
+
+.contact-right{
+  text-align:right;
+}
+
+.contact-right h3{
+  font-size:28px;
+  margin-bottom:20px;
+
+  color:#ff7a1a;
+}
+
+.contact-right p{
+  font-size:18px;
+  line-height:1.8;
+  font-weight:600;
+}
+
+.copyright{
+  padding:26px;
+  text-align:center;
+
+  background:#02051a;
+  color:#999;
+
+  font-size:14px;
+  letter-spacing:2px;
+}
